@@ -2,7 +2,7 @@
 Visit at <a href="aislinnsmith.com" target="_blank">aislinnsmith.com</a>
 
 # How to Edit
-<h2>Prior to editing on a given machine, do the following:</h2>
+<h4>Prior to editing on a given machine, do the following:</h4>
 <ol>
   <li>Check that you have git installed on your device by running <code>git --version</code>. If it doesn't seem to be there, follow <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">these instructions</a> to install it.</li>
   <li>If its your first time editing from a given machine, clone the repository locally (run <code>git clone https://github.com/AislinnS456/aislinns456.github.io.git</code> locally</li>
