@@ -2,12 +2,13 @@
 Visit at <a href="aislinnsmith.com" target="_blank">aislinnsmith.com</a>
 
 # How to Edit
-<h4>Prior to editing on a given machine, do the following:</h4>
+## Prior to editing on a given machine, do the following:
 <ol>
-  <li>Check that you have git installed on your device by running <code>git --version</code>. If it doesn't seem to be there, follow <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">these instructions</a> to install it.</li>
+  <li>Check that you have Git installed on your device by running <code>git --version</code>. If it doesn't seem to be there, follow <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">these instructions</a> to install it.</li>
   <li>If its your first time editing from a given machine, clone the repository locally (run <code>git clone https://github.com/AislinnS456/aislinns456.github.io.git</code> locally</li>
 </ol>
 
+## Steps to make edits with Git:
 <ol>
   <li>Open the repository in VSCode or another code editor</li>
   <li>In terminal within the repository folder, run <code>git pull</code> to get the latest changes</li>
@@ -19,7 +20,7 @@ Visit at <a href="aislinnsmith.com" target="_blank">aislinnsmith.com</a>
   <li>Wait ~5 minutes for your changes to propogate and the live website to update</li>
 </ol>
 
-<h4>Main spots to make edits:</h4>
+## Main spots to make edits:
 <ul>
   <li>The <code>styles.css</code> file handles styling for the entire website. Look through it for any colors you want to change or specific classes you see throughout the other html files.</li>
   <li>The <code>resources</code> folder contains all of the images, pdfs, and other files relevant to the site. Add your new resources there and include them in the site with <code>img</code> and <code>a</code> tags.</li>
