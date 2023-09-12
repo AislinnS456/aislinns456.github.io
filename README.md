@@ -26,5 +26,5 @@ Visit at <a href="aislinnsmith.com" target="_blank">aislinnsmith.com</a>
   <li>The <code>resources</code> folder contains all of the images, pdfs, and other files relevant to the site. Add your new resources there and include them in the site with <code>img</code> and <code>a</code> tags.</li>
   <li>Anywhere a <code>ul</code> or <code>ol</code> appears, add more <code>li</code> tags within to add more list items.</li>
   <li>Any block of text or <code>h</code> tag is a good spot to change.</li>
-  <li>For other questions, <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools</a> is a great resource for examples and you could probably also ask ChatGPT ;)</li>
+  <li>For other questions, <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools</a> is a great resource with examples and you could probably also ask ChatGPT ;)</li>
 </ul>
