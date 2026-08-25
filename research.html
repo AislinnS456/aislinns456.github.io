@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        /* The container that holds both columns */
+        .container {
+            display: flex;
+            gap: 20px;            /* Adds space between the columns */
+            align-items: flex-start; /* Aligns items to the top */
+            max-width: 1000px;
+            margin: 0 auto;       /* Centers the container on the page */
+            padding: 20px;
+        }
+
+        /* Column 1: Photos stack vertically inside */
+        .photo-column {
+            flex: 1;              /* Takes up equal width */
+            display: flex;
+            flex-direction: column; /* Stacks photos vertically */
+            gap: 15px;            /* Space between each photo */
+        }
+
+        .photo-column img {
+            width: 100%;          /* Makes images responsive */
+            height: auto;
+            border-radius: 8px;   /* Optional: rounds image corners */
+        }
+
+        /* Column 2: Text column */
+        .text-column {
+            flex: 1;              /* Takes up equal width */
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Responsive design: switches to a single column on mobile screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +57,17 @@
        
     </div>
     <div class="container"> 
-        <div class="content">
-            <div>
+     <div class="content">
+    <div>
           
                 
-                
-    <div class="container"> 
-        <div class="content">
-         
+     <div class="photo-column">
+             <img src="New Website Photo.png" width="280px" height = "250px" />
+             <img src="cat reading book.jpg" width="260px" height = "250px" />
+           
+    </div>
             
-            <img src="New Website Photo.png" width="280px" height = "250px" />
-            <div style="margin-left: 24px;">     
-            <img src="cat reading book.jpg" width="280px" height = "250px" />
-            <div style="margin-left: 24px;"> 
+           
                 
                 
                 <h2 style="margin-top: 16px;">Publications</h2>
