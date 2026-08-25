@@ -1,98 +1,200 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<style>
-.rectangle {
-  width: 800px;
-  height: 100px;
-  background-color: #E3F2FD;
-  padding: 10px; /* Add some space around the text */
-  text-align: left; /* Center the text horizontally */
-  line-height: 1.5; /* Add some vertical spacing between lines of text */
-}
-</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aislinn Smith | Outreach/Teaching </title>
-    <link href = 'https://fonts.google.com/specimen/Signika+Negative' rel = 'stylesheet'>
-    <link rel = 'stylesheet' href = 'styles.css'>
+    <title>Aislinn Smith | Outreach/Teaching</title>
+
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    /* Main two-column layout */
+    .outreach-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Left column */
+    .outreach-sidebar {
+        flex: 0 0 30%;
+    }
+
+    .outreach-sidebar img {
+        display: block;
+        width: 100%;
+        max-width: 140px;
+        height: auto;
+    }
+
+    /* Right column: all text */
+    .outreach-content {
+        flex: 0 0 60%;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    /* Section headings */
+    .outreach-content h2 {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    /* Information boxes */
+    .rectangle {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        background-color: #E3F2FD;
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* Links inside information boxes */
+    .rectangle a {
+        display: inline;
+    }
+
+    /* Embedded presentation */
+    .presentation {
+        margin-top: 15px;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 600px) {
+        .outreach-layout {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .outreach-sidebar,
+        .outreach-content {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        .outreach-sidebar img {
+            max-width: 140px;
+        }
+
+        .rectangle {
+            width: 100%;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+</style>
+```
+
 </head>
+
 <body>
-    <div class="navbar">
-           <a class="navbar-item" href="index.html"><strong>Home</strong></a>
-        <a class="navbar-item" href="research.html">Research</a>
-        <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
-        <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
-       
-       
+
+```
+<!-- Navigation -->
+<div class="navbar">
+    <a class="navbar-item" href="index.html"><strong>Home</strong></a>
+    <a class="navbar-item" href="research.html">Research</a>
+    <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
+    <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
+</div>
+
+
+<!-- Main two-column layout -->
+<div class="outreach-layout">
+
+    <!-- LEFT COLUMN -->
+    <div class="outreach-sidebar">
+
+        <img src="Screenshot 2025-04-06 at 3.05.46 PM.png"
+             alt="Math for All icon">
+
     </div>
-    <div class="container"> 
-        <div class="content">
-            <div>                
-                
-    <div class="container"> 
-        <div class="content">
-                     
-            <div style="margin-left: 24px;">          
-                
-                
-                <h2 style="margin-top: 24px;"> Math for All in Austin 2025 
-                <img src="Screenshot 2025-04-06 at 3.05.46 PM.png" style="position:absolute; top:135px; left:40px;" alt="Math Icon" width ="140"> </h2>
-
-                
-                <br>
-
-                <div class="rectangle">
-                I am one of the three organizers for the 4th Annual Math for All in Austin Conference. This conference was one of the six satellite conferences in the nation.
-                 <a href="https://sites.google.com/view/mathforallnola/in-person-locations/austin-tx" target="_blank">Click here to learn more </a>
-                
-                </div>
-                
-                <br>
-                
-                <h2 style="margin-top: 24px;">A Technical Guide to Applications</h2>
-
-      
-               <!-- <img src="Adobe Express - file.png" style="position:absolute; top:340px; left:40px;" alt="Math Icon"; object-fit: contain> </h2> -->
-
-                
-                <br>
-                
-                <div class="rectangle">
-                 As part of my role as conference organizer, I helped to create an information packet aimed at undergraduates. I have filled this with all the "information I wish I knew before applying to grad school". This is a living document, and I will continue to crowd source information, so please message me if you have something to add.
-                  
-                 <a href="https://docs.google.com/document/d/1S4Ty2WNpQXUguXbEuYETVyRGBud9hdRCI0sMSrvQBL0/edit?usp=sharing" target="_blank">Click here to view the information packet</a>
-    </a>
-                </div>
-
-               <br>
-
-                <div class="container">
-                   <h2 style="margin-top: 24px;">Miscellany</h2>
-                  <br>
-                  1) Here are slides from a 45min talk I gave at UT Austin's AWM Meeting in April 2025! This talk was meant to be an introduction to hyperbolic geometry, the works of Karen Uhlenbeck, and a quick discussion on computational geometry/math modelling
-                  <br>
-                  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfj8Awo0kN3PqLXkE62cwbfHTPSW7bu-EZ5YnA3nlSVwoVZsqQR8K3rOrhb5QI-9nP83sPDosb2Y9G/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="484" height="392" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                
-                </div>
-                
-                <br>
-
-              
-                
- 
-</li>
 
 
-                    
-                </ul>   
-                </ul>
-            </div>
+    <!-- RIGHT COLUMN: ALL TEXT -->
+    <div class="outreach-content">
+
+
+        <!-- Math for All -->
+        <h2>Math for All in Austin 2025</h2>
+
+        <div class="rectangle">
+            I am one of the three organizers for the 4th Annual Math for All
+            in Austin Conference. This conference was one of the six satellite
+            conferences in the nation.
+
+            <a href="https://sites.google.com/view/mathforallnola/in-person-locations/austin-tx"
+               target="_blank">
+                Click here to learn more.
+            </a>
         </div>
-    </div>
-</body>
-</html>
 
+
+        <!-- Technical Guide -->
+        <h2>A Technical Guide to Applications</h2>
+
+        <div class="rectangle">
+            As part of my role as conference organizer, I helped to create
+            an information packet aimed at undergraduates. I have filled this
+            with all the "information I wish I knew before applying to grad
+            school." This is a living document, and I will continue to crowd
+            source information, so please message me if you have something
+            to add.
+
+            <a href="https://docs.google.com/document/d/1S4Ty2WNpQXUguXbEuYETVyRGBud9hdRCI0sMSrvQBL0/edit?usp=sharing"
+               target="_blank">
+                Click here to view the information packet.
+            </a>
+        </div>
+
+
+        <!-- Miscellany -->
+        <h2>Miscellany</h2>
+
+        <p>
+            Here are slides from a 45-minute talk I gave at UT Austin's AWM
+            Meeting in April 2025! This talk was meant to be an introduction
+            to hyperbolic geometry, the work of Karen Uhlenbeck, and a quick
+            discussion on computational geometry/math modelling.
+        </p>
+
+        <div class="presentation">
+            <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vSfj8Awo0kN3PqLXkE62cwbfHTPSW7bu-EZ5YnA3nlSVwoVZsqQR8K3rOrhb5QI-9nP83sPDosb2Y9G/pubembed?start=false&loop=false&delayms=3000"
+                width="484"
+                height="392"
+                frameborder="0"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true">
+            </iframe>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</body>
+
+</html>
 
 
