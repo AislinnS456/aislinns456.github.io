@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-   <style>
-        /* Forces the container to center and stop growing */
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aislinn Smith | Research</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
         .container {
-            display: flex !important; /* Forces side-by-side layout */
+            display: flex;
             gap: 30px;
             max-width: 1000px;
             margin: 0 auto;
@@ -11,94 +22,180 @@
             box-sizing: border-box;
         }
 
-        /* Forces the photo column to only take up 40% of the width */
+        /* Left column: photos stacked vertically */
         .photo-column {
-            flex: 0 0 40%; 
+            flex: 0 0 40%;
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        /* Forces images to stay inside the 40% column */
         .photo-column img {
             width: 100%;
-            max-width: 400px; /* Hard ceiling for image width */
+            max-width: 400px;
             height: auto;
             display: block;
         }
 
-        /* Forces text column to take up the remaining 60% */
+        /* Right column: text */
         .text-column {
-            flex: 0 0 60%;
-            font-family: sans-serif;
+            flex: 1;
             line-height: 1.6;
         }
 
-        /* Mobile fallback: only stacks when screen is very small */
+        /* Stack columns on small screens */
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
             }
-            .photo-column, .text-column {
+
+            .photo-column,
+            .text-column {
                 flex: 0 0 100%;
+            }
+
+            .photo-column img {
+                max-width: 100%;
             }
         }
     </style>
 </head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aislinn Smith | Research</title>
-    <link href = 'https://fonts.google.com/specimen/Signika+Negative' rel = 'stylesheet'>
-    <link rel = 'stylesheet' href = 'styles.css'>
-</head>
-<body>
-    <div class="navbar">
-           <a class="navbar-item" href="index.html"><strong>Home</strong></a>
-           <a class="navbar-item" href="research.html">Research</a>
-           <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
-           <a class="navbar-item" href="outreach.html">Outreach/Teaching</a> 
-      
-       
-       
-    </div>
-    <div class="container"> 
-     <div class="content">
-    <div>
 
-    
+<body>
+
+    <div class="navbar">
+        <a class="navbar-item" href="index.html"><strong>Home</strong></a>
+        <a class="navbar-item" href="research.html">Research</a>
+        <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
+        <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
+    </div>
+
+    <!-- Photos on the left, text on the right -->
     <div class="container">
+
         <div class="photo-column">
-              <img src="New Website Photo.png" width="280px" height = "250px" />
-             <img src="cat reading book.jpg" width="260px" height = "250px" />
+            <img src="New Website Photo.png" alt="Aislinn Smith">
+            <img src="cat reading book.jpg" alt="A cat reading a book">
         </div>
+
         <div class="text-column">
-            <h2>Your Content Heading</h2>
-            <p>Your text will now stay locked to the right side of the photos.</p>
+            <p>
+                Your text will go here. This text will appear to the right
+                of the two photos.
+            </p>
+
+            <p>
+                You can add additional paragraphs here, and they will remain
+                in the right-hand column.
+            </p>
         </div>
+
     </div>
-                  
-                
-                <h2 style="margin-top: 16px;">Publications</h2>
-                <ul>
-                    <li><h3><a href="https://doi.org/10.1088/1361-6544/ac2a15" target="_blank">Avery, M., Dedina, C., Smith, A, Scheel, A. (2021). Instability in large bounded domains branched versus unbranched resonances. Nonlinearity, 34(11), 7916-7937.</a></h3></li>
-                    <li><h3><a href="https://doi.org/10.48550/arXiv.2205.00628" target="_blank">Patil, A., Duarte, A., Smith, A., Tanaka, T., & Bisetti, F. (2022). Chance-Constrained Stochastic Optimal Control via Path Integral and Finite Difference Methods. arXiv.</a></h3></li>
-                </ul>
-                <h2 style="margin-top: 16px;">Presentations/Conference Attendances</h2>
-                <ul>
-                    <li><h3>  <a href="https://sites.google.com/unifi.it/cime/">Algebraic and geometric combinatorics: Coxeter group theory and representation theory </a>  (Summer 2026) </h3></li>                           
-                    <li><h3> <a href="https://websites.umich.edu/~jchw/SummerSchool2026/SummerSchool2026.html">Configuration Spaces Summer School </a>   (Summer 2026) </h3></li>
-                     <li><h3> <a href="https://sites.google.com/view/ontariotopologyseminar/home">Ontario Topology Seminar  </a> (Fall 2025) </h3></li>
-                    <li><h3> <a href="https://sites.google.com/view/gtpc2025/home?authuser=0">Geometry and Topology of Polyhedral Complexes </a> (Summer 2025) </h3></li>
-                    <li><h3> <a href="https://www.maths.gla.ac.uk/~alecuona/Paolo_conf.html"> Combinatorial and gauge theoretical methods in low dimensional-topology and geometry  </a> (Summer 2024) </h3></li>
-                    <li><h3> <a href=" https://www.mpim-bonn.mpg.de/de/node/12691"> Homology Growth in Topology and Group Theory </a> (Summer 2024) </h3></li>
-                    <li><h3> Joint Mathematics Meeting (JMM) - <i>Undergraduate Presenter</i> (Winter 2023)</h3></li>
-                    <li><h3> GROW (Graduate Research Opportunities for Women) @ Duke University - Undergraduate Participant (Fall 2022)</h3></li>
-                    <li><h3> Texas Undergraduate Mathematicians Conference - <i> Undergraduate Presenter and Panelist</i> (Fall 2022)</h3></li>
-                   
-                </ul>   
-                </ul>
-            </div>
-        </div>
-    </div>
+
+    <h2 style="margin-top: 16px;">Publications</h2>
+
+    <ul>
+        <li>
+            <h3>
+                <a href="https://doi.org/10.1088/1361-6544/ac2a15" target="_blank">
+                    Avery, M., Dedina, C., Smith, A., Scheel, A. (2021).
+                    Instability in large bounded domains branched versus unbranched resonances.
+                    Nonlinearity, 34(11), 7916-7937.
+                </a>
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://doi.org/10.48550/arXiv.2205.00628" target="_blank">
+                    Patil, A., Duarte, A., Smith, A., Tanaka, T., & Bisetti, F. (2022).
+                    Chance-Constrained Stochastic Optimal Control via Path Integral and Finite Difference Methods.
+                    arXiv.
+                </a>
+            </h3>
+        </li>
+    </ul>
+
+    <h2 style="margin-top: 16px;">Presentations/Conference Attendances</h2>
+
+    <ul>
+        <li>
+            <h3>
+                <a href="https://sites.google.com/unifi.it/cime/">
+                    Algebraic and geometric combinatorics: Coxeter group theory and representation theory
+                </a>
+                (Summer 2026)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://websites.umich.edu/~jchw/SummerSchool2026/SummerSchool2026.html">
+                    Configuration Spaces Summer School
+                </a>
+                (Summer 2026)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://sites.google.com/view/ontariotopologyseminar/home">
+                    Ontario Topology Seminar
+                </a>
+                (Fall 2025)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://sites.google.com/view/gtpc2025/home?authuser=0">
+                    Geometry and Topology of Polyhedral Complexes
+                </a>
+                (Summer 2025)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://www.maths.gla.ac.uk/~alecuona/Paolo_conf.html">
+                    Combinatorial and gauge theoretical methods in low dimensional-topology and geometry
+                </a>
+                (Summer 2024)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <a href="https://www.mpim-bonn.mpg.de/de/node/12691">
+                    Homology Growth in Topology and Group Theory
+                </a>
+                (Summer 2024)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                Joint Mathematics Meeting (JMM) -
+                <i>Undergraduate Presenter</i>
+                (Winter 2023)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                GROW (Graduate Research Opportunities for Women) @ Duke University -
+                Undergraduate Participant (Fall 2022)
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                Texas Undergraduate Mathematicians Conference -
+                <i>Undergraduate Presenter and Panelist</i>
+                (Fall 2022)
+            </h3>
+        </li>
+    </ul>
+
 </body>
 </html>
