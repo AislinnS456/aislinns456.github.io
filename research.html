@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        /* The container that holds both columns */
+   <style>
+        /* Forces the container to center and stop growing */
         .container {
-            display: flex;
-            gap: 20px;            /* Adds space between the columns */
-            align-items: flex-start; /* Aligns items to the top */
+            display: flex !important; /* Forces side-by-side layout */
+            gap: 30px;
             max-width: 1000px;
-            margin: 0 auto;       /* Centers the container on the page */
+            margin: 0 auto;
             padding: 20px;
+            box-sizing: border-box;
         }
 
-        /* Column 1: Photos stack vertically inside */
+        /* Forces the photo column to only take up 40% of the width */
         .photo-column {
-            flex: 1;              /* Takes up equal width */
+            flex: 0 0 40%; 
             display: flex;
-            flex-direction: column; /* Stacks photos vertically */
-            gap: 15px;            /* Space between each photo */
+            flex-direction: column;
+            gap: 15px;
         }
 
+        /* Forces images to stay inside the 40% column */
         .photo-column img {
-            width: 100%;          /* Makes images responsive */
+            width: 100%;
+            max-width: 400px; /* Hard ceiling for image width */
             height: auto;
-            border-radius: 8px;   /* Optional: rounds image corners */
+            display: block;
         }
 
-        /* Column 2: Text column */
+        /* Forces text column to take up the remaining 60% */
         .text-column {
-            flex: 1;              /* Takes up equal width */
+            flex: 0 0 60%;
             font-family: sans-serif;
             line-height: 1.6;
         }
 
-        /* Responsive design: switches to a single column on mobile screens */
-        @media (max-width: 768px) {
+        /* Mobile fallback: only stacks when screen is very small */
+        @media (max-width: 600px) {
             .container {
                 flex-direction: column;
             }
+            .photo-column, .text-column {
+                flex: 0 0 100%;
+            }
         }
     </style>
-<head>
+</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aislinn Smith | Research</title>
@@ -59,20 +64,19 @@
     <div class="container"> 
      <div class="content">
     <div>
-          
-                
-     <div class="photo-column">
-             <img src="New Website Photo.png" width="280px" height = "250px" />
+
+    
+    <div class="container">
+        <div class="photo-column">
+              <img src="New Website Photo.png" width="280px" height = "250px" />
              <img src="cat reading book.jpg" width="260px" height = "250px" />
-           
+        </div>
+        <div class="text-column">
+            <h2>Your Content Heading</h2>
+            <p>Your text will now stay locked to the right side of the photos.</p>
+        </div>
     </div>
-            
-           
-       <div class="text-column">
-            <h2>Our Gallery Story</h2>
-            <p>This text lives in the right column, completely independent of the photo stack. You can write as many paragraphs as you need here without messing up the alignment of your images.</p>
-            <p>Because we used CSS Flexbox, both columns will dynamically adjust their widths. If you view this on a phone, the media query will gracefully stack the text underneath the photos so it remains highly readable.</p>
-        </div>          
+                  
                 
                 <h2 style="margin-top: 16px;">Publications</h2>
                 <ul>
