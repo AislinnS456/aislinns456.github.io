@@ -15,35 +15,40 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
-    /* Main two-column layout */
-    .outreach-layout {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 10%;
+    /* Main page content */
+    .outreach-content {
         max-width: 1000px;
         margin: 0 auto;
         padding: 20px;
         box-sizing: border-box;
-    }
-
-    /* Left column */
-    .outreach-sidebar {
-        flex: 0 0 30%;
-    }
-
-    .outreach-sidebar img {
-        display: block;
-        width: 100%;
-        max-width: 140px;
-        height: auto;
-    }
-
-    /* Right column: all text */
-    .outreach-content {
-        flex: 0 0 60%;
         line-height: 1.6;
         font-size: 16px;
+    }
+
+    /* Top section: image next to rectangle */
+    .math-for-all {
+        display: flex;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .math-for-all img {
+        width: 140px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .math-for-all .rectangle {
+        flex: 1;
+    }
+
+    /* Information boxes */
+    .rectangle {
+        box-sizing: border-box;
+        padding: 15px;
+        background-color: #E3F2FD;
+        text-align: left;
+        line-height: 1.6;
     }
 
     /* Section headings */
@@ -53,51 +58,28 @@
         margin-bottom: 12px;
     }
 
-    /* Information boxes */
-    .rectangle {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 15px;
-        background-color: #E3F2FD;
-        text-align: left;
-        line-height: 1.6;
-        margin-bottom: 20px;
+    /* Space after top section */
+    .math-for-all {
+        margin-bottom: 25px;
     }
 
-    /* Links inside information boxes */
-    .rectangle a {
-        display: inline;
-    }
-
-    /* Embedded presentation */
+    /* Presentation */
     .presentation {
         margin-top: 15px;
     }
 
     /* Mobile layout */
     @media (max-width: 600px) {
-        .outreach-layout {
+        .math-for-all {
             flex-direction: column;
-            gap: 20px;
         }
 
-        .outreach-sidebar,
-        .outreach-content {
-            flex: 0 0 100%;
-            width: 100%;
-        }
-
-        .outreach-sidebar img {
-            max-width: 140px;
-        }
-
-        .rectangle {
-            width: 100%;
+        .math-for-all img {
+            width: 140px;
         }
 
         iframe {
             max-width: 100%;
-            height: auto;
         }
     }
 </style>
@@ -117,24 +99,17 @@
 </div>
 
 
-<!-- Main two-column layout -->
-<div class="outreach-layout">
+<!-- Main page content -->
+<div class="outreach-content">
 
-    <!-- LEFT COLUMN -->
-    <div class="outreach-sidebar">
+
+    <!-- Math for All: image + rectangle -->
+    <h2>Math for All in Austin 2025</h2>
+
+    <div class="math-for-all">
 
         <img src="Screenshot 2025-04-06 at 3.05.46 PM.png"
              alt="Math for All icon">
-
-    </div>
-
-
-    <!-- RIGHT COLUMN: ALL TEXT -->
-    <div class="outreach-content">
-
-
-        <!-- Math for All -->
-        <h2>Math for All in Austin 2025</h2>
 
         <div class="rectangle">
             I am one of the three organizers for the 4th Annual Math for All
@@ -147,47 +122,47 @@
             </a>
         </div>
 
-
-        <!-- Technical Guide -->
-        <h2>A Technical Guide to Applications</h2>
-
-        <div class="rectangle">
-            As part of my role as conference organizer, I helped to create
-            an information packet aimed at undergraduates. I have filled this
-            with all the "information I wish I knew before applying to grad
-            school." This is a living document, and I will continue to crowd
-            source information, so please message me if you have something
-            to add.
-
-            <a href="https://docs.google.com/document/d/1S4Ty2WNpQXUguXbEuYETVyRGBud9hdRCI0sMSrvQBL0/edit?usp=sharing"
-               target="_blank">
-                Click here to view the information packet.
-            </a>
-        </div>
+    </div>
 
 
-        <!-- Miscellany -->
-        <h2>Miscellany</h2>
+    <!-- Technical Guide -->
+    <h2>A Technical Guide to Applications</h2>
 
-        <p>
-            Here are slides from a 45-minute talk I gave at UT Austin's AWM
-            Meeting in April 2025! This talk was meant to be an introduction
-            to hyperbolic geometry, the work of Karen Uhlenbeck, and a quick
-            discussion on computational geometry/math modelling.
-        </p>
+    <div class="rectangle">
+        As part of my role as conference organizer, I helped to create
+        an information packet aimed at undergraduates. I have filled this
+        with all the "information I wish I knew before applying to grad
+        school." This is a living document, and I will continue to crowd
+        source information, so please message me if you have something
+        to add.
 
-        <div class="presentation">
-            <iframe
-                src="https://docs.google.com/presentation/d/e/2PACX-1vSfj8Awo0kN3PqLXkE62cwbfHTPSW7bu-EZ5YnA3nlSVwoVZsqQR8K3rOrhb5QI-9nP83sPDosb2Y9G/pubembed?start=false&loop=false&delayms=3000"
-                width="484"
-                height="392"
-                frameborder="0"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true">
-            </iframe>
-        </div>
+        <a href="https://docs.google.com/document/d/1S4Ty2WNpQXUguXbEuYETVyRGBud9hdRCI0sMSrvQBL0/edit?usp=sharing"
+           target="_blank">
+            Click here to view the information packet.
+        </a>
+    </div>
 
+
+    <!-- Miscellany -->
+    <h2>Miscellany</h2>
+
+    <p>
+        Here are slides from a 45-minute talk I gave at UT Austin's AWM
+        Meeting in April 2025! This talk was meant to be an introduction
+        to hyperbolic geometry, the work of Karen Uhlenbeck, and a quick
+        discussion on computational geometry/math modelling.
+    </p>
+
+    <div class="presentation">
+        <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSfj8Awo0kN3PqLXkE62cwbfHTPSW7bu-EZ5YnA3nlSVwoVZsqQR8K3rOrhb5QI-9nP83sPDosb2Y9G/pubembed?start=false&loop=false&delayms=3000"
+            width="484"
+            height="392"
+            frameborder="0"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+        </iframe>
     </div>
 
 </div>
