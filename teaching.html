@@ -1,39 +1,111 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aislinn Smith | Reading Group Coursework </title>
-    <link href = 'https://fonts.google.com/specimen/Signika+Negative' rel = 'stylesheet'>
-    <link rel = 'stylesheet' href = 'styles.css'>
-</head>
-<body>
-    <div class="navbar">
-        <a class="navbar-item" href="index.html"><strong>Home</strong></a>
-        <a class="navbar-item" href="research.html">Research</a>
-        <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
-        <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
-      
-       
-       
-    </div>
-    <div class="container"> 
-        <div class="content">
-            <div>
-                <h1 style="margin-top: 24px;">Reading Groups and Student Seminars</h1>
-                
-            <h2 style="margin-top: 16px;"> Riemann Surfaces Reading Group (2023-2024) </h2>    
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1ltgIh7CqNVaYmd368csSZIsk-UArjvJL#list" style="width:100%; height:175px; border:0;"></iframe>
 
-            <h2 style="margin-top: 16px;"> Low Dim Topology and Knot Theory Graduate Bootcamp (Fall 2024)  </h2> 
-                 <iframe src="https://drive.google.com/embeddedfolderview?id=10Jq8Nioxc-YyWYMXFzBre2Ij9yomhYJ9#list" style="width:100%; height:300px; border:0;"></iframe>
-                
-            
-                
-                </ul>
-            </div>
-        </div>
-    </div>
-   
+```
+<title>Aislinn Smith | Reading Group Coursework</title>
+
+<!-- Signika Negative font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    /* Main page content */
+    .reading-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    /* Main page heading */
+    .reading-content h1 {
+        font-size: 28px;
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Section headings */
+    .reading-content h2 {
+        font-size: 24px;
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    /* Embedded Google Drive folders */
+    .reading-folder {
+        width: 100%;
+        height: 175px;
+        border: 0;
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .reading-folder.large {
+        height: 300px;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 600px) {
+        .reading-content {
+            width: 100%;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+<div class="navbar">
+    <a class="navbar-item" href="index.html"><strong>Home</strong></a>
+    <a class="navbar-item" href="research.html">Research</a>
+    <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
+    <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
+</div>
+
+
+<!-- Main content -->
+<div class="reading-content">
+
+    <h1>Reading Groups and Student Seminars</h1>
+
+
+    <!-- Riemann Surfaces Reading Group -->
+    <h2>Riemann Surfaces Reading Group (2023–2024)</h2>
+
+    <iframe
+        class="reading-folder"
+        src="https://drive.google.com/embeddedfolderview?id=1ltgIh7CqNVaYmd368csSZIsk-UArjvJL#list"
+        title="Riemann Surfaces Reading Group materials">
+    </iframe>
+
+
+    <!-- Low Dimensional Topology and Knot Theory Bootcamp -->
+    <h2>Low Dim Topology and Knot Theory Graduate Bootcamp (Fall 2024)</h2>
+
+    <iframe
+        class="reading-folder large"
+        src="https://drive.google.com/embeddedfolderview?id=10Jq8Nioxc-YyWYMXFzBre2Ij9yomhYJ9#list"
+        title="Low Dimensional Topology and Knot Theory Graduate Bootcamp materials">
+    </iframe>
+
+</div>
+```
+
 </body>
 </html>
+
