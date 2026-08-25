@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        .container {
-            display: flex;
+        /* Photo + text section */
+        .research-intro {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: flex-start;
             gap: 30px;
             max-width: 1000px;
             margin: 0 auto;
@@ -22,39 +25,41 @@
             box-sizing: border-box;
         }
 
-        /* Left column: photos stacked vertically */
-        .photo-column {
+        /* Left column */
+        .research-photos {
             flex: 0 0 40%;
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        .photo-column img {
+        .research-photos img {
+            display: block;
             width: 100%;
             max-width: 400px;
             height: auto;
-            display: block;
         }
 
-        /* Right column: text */
-        .text-column {
+        /* Right column */
+        .research-description {
             flex: 1;
+            min-width: 0;
             line-height: 1.6;
         }
 
-        /* Stack columns on small screens */
+        /* Mobile layout */
         @media (max-width: 600px) {
-            .container {
-                flex-direction: column;
+            .research-intro {
+                flex-direction: column !important;
             }
 
-            .photo-column,
-            .text-column {
+            .research-photos,
+            .research-description {
                 flex: 0 0 100%;
+                width: 100%;
             }
 
-            .photo-column img {
+            .research-photos img {
                 max-width: 100%;
             }
         }
@@ -70,31 +75,43 @@
         <a class="navbar-item" href="outreach.html">Outreach/Teaching</a>
     </div>
 
-    <!-- Photos on the left, text on the right -->
-    <div class="container">
 
-        <div class="photo-column">
+    <!-- ========================================= -->
+    <!--        PHOTOS + RESEARCH DESCRIPTION     -->
+    <!-- ========================================= -->
+
+    <div class="research-intro">
+
+        <div class="research-photos">
             <img src="New Website Photo.png" alt="Aislinn Smith">
             <img src="cat reading book.jpg" alt="A cat reading a book">
         </div>
 
-        <div class="text-column">
+        <div class="research-description">
+
             <p>
                 Your text will go here. This text will appear to the right
                 of the two photos.
             </p>
 
             <p>
-                You can add additional paragraphs here, and they will remain
-                in the right-hand column.
+                Additional text can go here. It will remain in the right-hand
+                column rather than moving below the photos.
             </p>
+
         </div>
 
     </div>
 
+
+    <!-- ========================================= -->
+    <!--              PUBLICATIONS                 -->
+    <!-- ========================================= -->
+
     <h2 style="margin-top: 16px;">Publications</h2>
 
     <ul>
+
         <li>
             <h3>
                 <a href="https://doi.org/10.1088/1361-6544/ac2a15" target="_blank">
@@ -109,20 +126,28 @@
             <h3>
                 <a href="https://doi.org/10.48550/arXiv.2205.00628" target="_blank">
                     Patil, A., Duarte, A., Smith, A., Tanaka, T., & Bisetti, F. (2022).
-                    Chance-Constrained Stochastic Optimal Control via Path Integral and Finite Difference Methods.
-                    arXiv.
+                    Chance-Constrained Stochastic Optimal Control via Path Integral and
+                    Finite Difference Methods. arXiv.
                 </a>
             </h3>
         </li>
+
     </ul>
+
+
+    <!-- ========================================= -->
+    <!--       PRESENTATIONS / CONFERENCES         -->
+    <!-- ========================================= -->
 
     <h2 style="margin-top: 16px;">Presentations/Conference Attendances</h2>
 
     <ul>
+
         <li>
             <h3>
                 <a href="https://sites.google.com/unifi.it/cime/">
-                    Algebraic and geometric combinatorics: Coxeter group theory and representation theory
+                    Algebraic and geometric combinatorics: Coxeter group theory and
+                    representation theory
                 </a>
                 (Summer 2026)
             </h3>
@@ -158,7 +183,8 @@
         <li>
             <h3>
                 <a href="https://www.maths.gla.ac.uk/~alecuona/Paolo_conf.html">
-                    Combinatorial and gauge theoretical methods in low dimensional-topology and geometry
+                    Combinatorial and gauge theoretical methods in low dimensional-topology
+                    and geometry
                 </a>
                 (Summer 2024)
             </h3>
@@ -195,6 +221,7 @@
                 (Fall 2022)
             </h3>
         </li>
+
     </ul>
 
 </body>
