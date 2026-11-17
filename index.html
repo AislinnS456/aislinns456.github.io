@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,105 +15,191 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
+    <style>
+        /* Homepage-specific layout */
+        .home-page {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .intro-section {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 32px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 280px;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .intro-copy {
+            min-width: 0;
+        }
+
+        .intro-copy h1 {
+            margin: 0 0 12px;
+            font-size: 1.55rem;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        .intro-copy p,
+        .research-section p,
+        .contact-section p {
+            margin: 0 0 12px;
+            font-size: 1rem;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        .cv-link {
+            margin-top: 16px !important;
+        }
+
+        .research-section,
+        .contact-section {
+            margin-top: 34px;
+            padding-top: 24px;
+            border-top: 1px solid #dddddd;
+        }
+
+        .research-section h2,
+        .contact-section h2 {
+            margin: 0 0 14px;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        .undergrad-note {
+            margin-top: 18px !important;
+            padding-left: 14px;
+            border-left: 2px solid #c8c8c8;
+            color: #666666;
+            font-size: 0.9rem !important;
+            line-height: 1.55 !important;
+        }
+
+        .contact-details {
+            margin-left: 0;
+        }
+
+        .contact-details p {
+            margin-bottom: 7px;
+        }
+
+        @media (max-width: 700px) {
+            .intro-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .profile-photo {
+                width: 220px;
+                margin: 0 auto;
+            }
+
+            .intro-copy h1 {
+                font-size: 1.4rem;
+            }
+
+            .research-section,
+            .contact-section {
+                margin-top: 28px;
+                padding-top: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
-<div class="navbar">
-    <a class="navbar-item" href="index.html">
-        <strong>Home</strong>
-    </a>
+    <!-- Navigation -->
+    <div class="navbar">
+        <a class="navbar-item" href="index.html">
+            <strong>Home</strong>
+        </a>
 
-    <a class="navbar-item" href="research.html">
-        Research
-    </a>
+        <a class="navbar-item" href="research.html">
+            Research
+        </a>
 
-    <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
+        <a class="navbar-item" href="teaching.html">Reading Groups/Student Seminars</a>
 
-    <a class="navbar-item" href="outreach.html">
-        Outreach/Teaching
-    </a>
-</div>
-
-<!-- Introduction -->
-<div class="container">
-
-    <div class="content">
-
-        <img src="resources/Aislinn Portrait .png"
-             style="width: 280px; height: auto; max-width: 100%; object-fit: contain;"
-             alt="Portrait of Aislinn Smith">
-
-        <div style="margin-left: 24px;">
-
-            <h3 style="margin-top: 7px;">
-                Hey! I'm Aislinn ("Ace-lyn"), a graduate student in the mathematics department at McGill University.
-            </h3>
-
-            <h3 style="margin-top: 7px;">
-                I enjoy thinking about the connections between algebraic/geometric topology, group theory, and combinatorial structures.
-            </h3>
-
-            <h3 style="margin-top: 7px;">
-                My current research concerns the complexity and isoperimetric behavior of positive-genus surface braid groups, with a focus on (bi)automatic group structures.
-            </h3>
-
-            <h3 style="margin-top: 7px;">
-                More broadly, I am interested in configuration spaces and related moduli spaces, particularly as settings for studying braid and braid-like groups. I would like to learn more about the homotopy-theoretic and algebro-geometric perspectives that connect these groups to questions across topology and geometry.
-            </h3>
-
-            <h3 style="margin-top: 8px;">
-                Please find my CV
-                <a href="resources/Aislinn Smith - CV (Academic).docx (2).pdf" target="_blank">
-                    here
-                </a>.
-            </h3>
-
-            <!-- Smaller scientific computing statement -->
-            <h3 style="
-                margin-top: 7px;
-                font-size: 0.9em;
-                font-weight: 400;
-                color: inherit;
-            ">
-                As an undergraduate, I did a fair amount of work in scientific computing and mathematical modeling, and I remain interested in exploring computational approaches to problems related to my current projects.
-            </h3>
-
-        </div>
-
+        <a class="navbar-item" href="outreach.html">
+            Outreach/Teaching
+        </a>
     </div>
 
-    <!-- Contact -->
-    <div class="content" style="margin-top: 16px;">
+    <div class="container home-page">
 
-        <div style="justify-content: center;">
+        <!-- Introduction -->
+        <section class="content intro-section">
+            <img class="profile-photo"
+                 src="resources/Aislinn Portrait .png"
+                 alt="Portrait of Aislinn Smith">
 
-            <h3 style="margin-top: 7px;">
-                <b>Contact</b>
-            </h3>
+            <div class="intro-copy">
+                <h1>Hey! I'm Aislinn ("Ace-lyn").</h1>
 
-            <div style="margin-top: 16px; margin-left: 16px;">
+                <p>
+                    I'm a graduate student in the mathematics department at McGill University.
+                </p>
 
-                <h3>
-                    <u>Pronouns</u>: she / her
-                </h3>
+                <p>
+                    I enjoy thinking about the connections between algebraic/geometric topology,
+                    group theory, and combinatorial structures.
+                </p>
 
-                <h3>
-                    <u>Email</u>: aislinn.smith at mail dot mcgill dot ca
-                </h3>
-
+                <p class="cv-link">
+                    Please find my CV
+                    <a href="resources/Aislinn Smith - CV (Academic).docx (2).pdf" target="_blank" rel="noopener">
+                        here
+                    </a>.
+                </p>
             </div>
+        </section>
 
-        </div>
+        <!-- Research interests -->
+        <section class="content research-section">
+            <h2>Research Interests</h2>
+
+            <p>
+                My current research concerns the complexity and isoperimetric behavior of
+                positive-genus surface braid groups, with a focus on (bi)automatic group structures.
+            </p>
+
+            <p>
+                More broadly, I am interested in configuration spaces and related moduli spaces,
+                particularly as settings for studying braid and braid-like groups. I would like to
+                learn more about the homotopy-theoretic and algebro-geometric perspectives that
+                connect these groups to questions across topology and geometry.
+            </p>
+
+            <p class="undergrad-note">
+                As an undergraduate, I did a fair amount of work in scientific computing and
+                mathematical modeling, and I remain interested in exploring computational
+                approaches to problems related to my current projects.
+            </p>
+        </section>
+
+        <!-- Contact -->
+        <section class="content contact-section">
+            <h2>Contact</h2>
+
+            <div class="contact-details">
+                <p><strong>Pronouns:</strong> she / her</p>
+                <p><strong>Email:</strong> aislinn.smith at mail dot mcgill dot ca</p>
+            </div>
+        </section>
 
     </div>
-
-</div>
 
 </body>
 </html>
-
-
-
 
