@@ -16,17 +16,25 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Homepage-specific layout */
-        .home-page {
-            max-width: 1000px;
+        /* Homepage layout */
+        * {
+            box-sizing: border-box;
+        }
+
+        .container.home-page {
+            display: block !important;
+            width: min(1100px, calc(100% - 48px));
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .intro-section {
-            display: grid;
+        /* Introduction: portrait beside introductory text */
+        .content.intro-section {
+            display: grid !important;
             grid-template-columns: 280px minmax(0, 1fr);
-            gap: 32px;
+            gap: 36px;
             align-items: center;
+            width: 100%;
         }
 
         .profile-photo {
@@ -42,61 +50,103 @@
         }
 
         .intro-copy h1 {
-            margin: 0 0 12px;
-            font-size: 1.55rem;
-            line-height: 1.25;
+            margin: 0 0 18px;
+            font-size: 1.65rem;
+            line-height: 1.3;
             font-weight: 600;
         }
 
-        .intro-copy p,
-        .research-section p,
-        .contact-section p {
-            margin: 0 0 12px;
+        .intro-copy p {
+            margin: 0 0 16px;
             font-size: 1rem;
             line-height: 1.65;
             font-weight: 400;
         }
 
-        .cv-link {
-            margin-top: 16px !important;
+        .intro-copy .cv-link {
+            margin-top: 22px;
+            margin-bottom: 0;
         }
 
-        .research-section,
-        .contact-section {
+        /* Research section: force heading and paragraphs to stack */
+        .content.research-section {
+            display: block !important;
+            width: 100%;
+            margin-top: 38px;
+            padding-top: 26px;
+            border-top: 1px solid #dddddd;
+        }
+
+        .research-section h2 {
+            display: block;
+            width: 100%;
+            margin: 0 0 18px;
+            font-size: 1.3rem;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        .research-section p {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 0 16px;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Undergraduate statement: visually secondary */
+        .research-section p.undergrad-note {
+            max-width: 850px;
+            margin-top: 22px;
+            margin-bottom: 0;
+            padding-left: 14px;
+            border-left: 2px solid #c8c8c8;
+            color: #666666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Contact section */
+        .content.contact-section {
+            display: block !important;
+            width: 100%;
             margin-top: 34px;
             padding-top: 24px;
             border-top: 1px solid #dddddd;
         }
 
-        .research-section h2,
         .contact-section h2 {
+            display: block;
             margin: 0 0 14px;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             line-height: 1.3;
             font-weight: 600;
         }
 
-        .undergrad-note {
-            margin-top: 18px !important;
-            padding-left: 14px;
-            border-left: 2px solid #c8c8c8;
-            color: #666666;
-            font-size: 0.9rem !important;
-            line-height: 1.55 !important;
-        }
-
         .contact-details {
-            margin-left: 0;
+            display: block;
+            margin: 0;
         }
 
         .contact-details p {
-            margin-bottom: 7px;
+            display: block;
+            margin: 0 0 8px;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 400;
         }
 
+        /* Mobile layout */
         @media (max-width: 700px) {
-            .intro-section {
+            .container.home-page {
+                width: calc(100% - 32px);
+            }
+
+            .content.intro-section {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 22px;
             }
 
             .profile-photo {
@@ -105,11 +155,11 @@
             }
 
             .intro-copy h1 {
-                font-size: 1.4rem;
+                font-size: 1.45rem;
             }
 
-            .research-section,
-            .contact-section {
+            .content.research-section,
+            .content.contact-section {
                 margin-top: 28px;
                 padding-top: 20px;
             }
@@ -140,11 +190,13 @@
 
         <!-- Introduction -->
         <section class="content intro-section">
+
             <img class="profile-photo"
                  src="resources/Aislinn Portrait .png"
                  alt="Portrait of Aislinn Smith">
 
             <div class="intro-copy">
+
                 <h1>Hey! I'm Aislinn ("Ace-lyn").</h1>
 
                 <p>
@@ -158,15 +210,19 @@
 
                 <p class="cv-link">
                     Please find my CV
-                    <a href="resources/Aislinn Smith - CV (Academic).docx (2).pdf" target="_blank" rel="noopener">
+                    <a href="resources/Aislinn Smith - CV (Academic).docx (2).pdf"
+                       target="_blank"
+                       rel="noopener">
                         here
                     </a>.
                 </p>
+
             </div>
         </section>
 
         <!-- Research interests -->
         <section class="content research-section">
+
             <h2>Research Interests</h2>
 
             <p>
@@ -186,20 +242,25 @@
                 mathematical modeling, and I remain interested in exploring computational
                 approaches to problems related to my current projects.
             </p>
+
         </section>
 
         <!-- Contact -->
         <section class="content contact-section">
+
             <h2>Contact</h2>
 
             <div class="contact-details">
+
                 <p><strong>Pronouns:</strong> she / her</p>
+
                 <p><strong>Email:</strong> aislinn.smith at mail dot mcgill dot ca</p>
+
             </div>
+
         </section>
 
     </div>
 
 </body>
 </html>
-
